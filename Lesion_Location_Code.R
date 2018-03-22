@@ -54,6 +54,9 @@ F_ROI_lesion_stat3 <- function(IP_subject,IP_Lesion_file_l,IP_ROI_coordinate,IP_
   #first read powers coordinate file and then evaluate the overlap between lesion and the ROIs
   p_cood <- read.table(IP_ROI_coordinate, header=TRUE)
   
+  # initalize a vector to collect distances
+  distance_distribution <- vector(mode = "numeric", length = nrow(voxels))
+  
   #now iterate through all given ROI_IDs and find out the mean distance from lesion voxel
   for(c2 in 1:length(IP_ROI_IDs))#for.c2.begins  #PARA
   {
@@ -68,9 +71,6 @@ F_ROI_lesion_stat3 <- function(IP_subject,IP_Lesion_file_l,IP_ROI_coordinate,IP_
     vox_z_cood <- round((89 + p_cood$z[roi_id])) 
     the_coordinates_of_this_power264_voxel <- c(vox_x_cood, vox_y_cood, vox_z_cood)
     
-    # initalize a list to collect distances
-    distance_distribution <- c()
-    
     # lets loop over the voxels we found
     for(v in 1:nrow(voxels)){
       
@@ -81,8 +81,8 @@ F_ROI_lesion_stat3 <- function(IP_subject,IP_Lesion_file_l,IP_ROI_coordinate,IP_
       temp_distance <- dist(rbind(the_coordinates_of_this_power264_voxel, the_coordinates_of_this_voxel), method="euclidean")
       
       # concatenate into a list
-      distance_distribution <- c(distance_distribution, temp_distance)   
-      
+      distance_distribution[v] <- temp_distance
+
     }
     
     # print mean, median, and minimum distances to the console
@@ -141,7 +141,6 @@ if(length(case_names) == length(Lesion_file_l))
       F_ROI_lesion_stat3(c1,Lesion_file_l,ROI_coordinate,Output_file_tag,ROI_IDs,case_names)
     }
   }
-  
 }
 
 if(length(case_names) != length(Lesion_file_l))
