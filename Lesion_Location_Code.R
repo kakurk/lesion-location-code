@@ -2,7 +2,6 @@ F_ROI_lesion_stat3 <- function(IP_subject,IP_Lesion_file_l,IP_ROI_coordinate,IP_
 {
   
   #Load the fmri library
-  
   library("fmri")
   
   #----------------------------------------------------------------------------------------------------------------
@@ -130,21 +129,20 @@ F_ROI_lesion_stat3 <- function(IP_subject,IP_Lesion_file_l,IP_ROI_coordinate,IP_
 
 #lesion_masks
 
+l_sub1a <- "/Users/kylekurkela/Desktop/HillaryLab/long.1.020/nnew_cot2fl3dtrap2swis007a1001-label.nii"
+l_sub1b <- "/Users/kylekurkela/Desktop/HillaryLab/long.1.020/nnew_T2FLAIRAXIALs005a1001-label.nii"
 
-l_sub1a <- "/storage/home/epg5130/work/lesion_distance_analysis/long.1.020/nnew_cot2fl3dtrap2swis007a1001-label.nii"
-l_sub1b <- "/storage/home/epg5130/work/lesion_distance_analysis/long.1.020/nnew_T2FLAIRAXIALs005a1001-label.nii"
+l_sub2a <- "/Users/kylekurkela/Desktop/HillaryLab/long.1.023/nnew_20110127_104146t2fl3dtrap2swis011a1001-label.nii"
+l_sub2b <- "/Users/kylekurkela/Desktop/HillaryLab/long.1.023/nnew_20110127_104146T2FLAIRAXIALs009a1001-label.nii"
 
-l_sub2a <- "/storage/home/epg5130/work/lesion_distance_analysis/long.1.023/nnew_20110127_104146t2fl3dtrap2swis011a1001-label.nii"
-l_sub2b <- "/storage/home/epg5130/work/lesion_distance_analysis/long.1.023/nnew_20110127_104146T2FLAIRAXIALs009a1001-label.nii"
+l_sub3a <- "/Users/kylekurkela/Desktop/HillaryLab/long.1.026/nnew_20111201_095347t2fl3dtrap2swis017a1001-label.nii"
+l_sub3b <- "/Users/kylekurkela/Desktop/HillaryLab/long.1.026/nnew_20111201_095347T2FLAIRAXIALs015a1001-label.nii"
 
-l_sub3a <- "/storage/home/epg5130/work/lesion_distance_analysis/long.1.026/nnew_20111201_095347t2fl3dtrap2swis017a1001-label.nii"
-l_sub3b <- "/storage/home/epg5130/work/lesion_distance_analysis/long.1.026/nnew_20111201_095347T2FLAIRAXIALs015a1001-label.nii"
+l_sub4a <- "/Users/kylekurkela/Desktop/HillaryLab/long.1.027/nnew_20120222_180702t2fl3dtrap2swis019a1001-label.nii"
 
-l_sub4a <- "/storage/home/epg5130/work/lesion_distance_analysis/long.1.027/nnew_20120222_180702t2fl3dtrap2swis019a1001-label.nii"
-
-l_sub5a <- "/storage/home/epg5130/work/lesion_distance_analysis/long.1.030/nnew_20120620_171657T1MPRAGEIsos002a1001-label.nii"
-l_sub5b <- "/storage/home/epg5130/work/lesion_distance_analysis/long.1.030/nnew_20120620_171657t2fl3dtrap2swis017a1001-label.nii"
-l_sub5c <- "/storage/home/epg5130/work/lesion_distance_analysis/long.1.030/nnew_20120620_171657T2FLAIRAXIALs015a1001-label.nii"
+l_sub5a <- "/Users/kylekurkela/Desktop/HillaryLab/long.1.030/nnew_20120620_171657T1MPRAGEIsos002a1001-label.nii"
+l_sub5b <- "/Users/kylekurkela/Desktop/HillaryLab/long.1.030/nnew_20120620_171657t2fl3dtrap2swis017a1001-label.nii"
+l_sub5c <- "/Users/kylekurkela/Desktop/HillaryLab/long.1.030/nnew_20120620_171657T2FLAIRAXIALs015a1001-label.nii"
 
 
 Lesion_file_l <-  c(l_sub1a, l_sub1b, l_sub2a, l_sub2b, l_sub3a, l_sub3b, l_sub4a, l_sub5a, l_sub5b, l_sub5c)
