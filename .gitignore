@@ -1,2 +1,5 @@
 *~
 *.nii
+Report_case_*
+Total_lesion_voxels*.dat
+.Rhistory
